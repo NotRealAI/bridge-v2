@@ -12,9 +12,14 @@ import { useShakingStyles } from "../../theme/animationUtils";
 const useBridgePaperStyles = makeStyles((theme) => {
   return {
     root: {
-      maxWidth: 400,
-      margin: "70px auto 0",
-      position: "relative",
+      //maxWidth: 400,
+      //margin: "70px auto 0",
+      //position: "relative",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0
     },
   };
 });
