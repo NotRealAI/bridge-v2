@@ -11,7 +11,7 @@ type ReleaseState = {
 };
 
 let initialState: ReleaseState = {
-  currency: BridgeCurrency.RENBTC,
+  currency: BridgeCurrency.RENDOGE,
   amount: 0, //
   address: "", // mzseycKNBVKFW1PjzisnPER226bJsGfnUh
 };

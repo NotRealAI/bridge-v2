@@ -642,33 +642,33 @@ export const getNetworkConfigByRentxName = (name: string) => {
 };
 
 export const supportedLockCurrencies = [
-  BridgeCurrency.BTC,
-  BridgeCurrency.BCH,
+  //BridgeCurrency.BTC,
+  //BridgeCurrency.BCH,
+  //BridgeCurrency.ZEC,
   BridgeCurrency.DOGE,
-  BridgeCurrency.ZEC,
 ];
 
 export const supportedMintDestinationChains = [
-  BridgeChain.ETHC,
-  BridgeChain.BSCC,
+  //BridgeChain.ETHC,
+  //BridgeChain.BSCC,
+  //BridgeChain.FTMC,
+  //BridgeChain.AVAXC,
   BridgeChain.MATICC,
-  BridgeChain.FTMC,
-  BridgeChain.AVAXC,
 ];
 
 export const supportedBurnChains = [
-  BridgeChain.ETHC,
-  BridgeChain.BSCC,
+  //BridgeChain.ETHC,
+  //BridgeChain.BSCC,
+  //BridgeChain.FTMC,
+  //BridgeChain.AVAXC,
   BridgeChain.MATICC,
-  BridgeChain.FTMC,
-  BridgeChain.AVAXC,
 ];
 
 export const supportedReleaseCurrencies = [
-  BridgeCurrency.RENBTC,
-  BridgeCurrency.RENBCH,
+  //BridgeCurrency.RENBTC,
+  //BridgeCurrency.RENBCH,
+  //BridgeCurrency.RENZEC,
   BridgeCurrency.RENDOGE,
-  BridgeCurrency.RENZEC,
 ];
 
 export const toMintedCurrency = (lockedCurrency: BridgeCurrency) => {
