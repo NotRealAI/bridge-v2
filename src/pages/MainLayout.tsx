@@ -99,9 +99,10 @@ export const MainLayout: FunctionComponent<MainLayoutVariantProps> = ({
   const { width } = useWindowSize();
   const theme = useTheme();
   useEffect(() => {
-    if (width > theme.breakpoints.values["sm"]) {
-      setMobileMenuOpen(false);
-    }
+    setMobileMenuOpen(false);
+    //if (width > theme.breakpoints.values["sm"]) {
+    //  setMobileMenuOpen(false);
+    //}
   }, [width, theme.breakpoints]);
 
   const handleTxHistoryToggle = useCallback(() => {
