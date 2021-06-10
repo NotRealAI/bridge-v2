@@ -18,6 +18,7 @@ import { PaperTitleProvider } from "../providers/TitleProviders";
 import { ConnectedMainLayout } from "./MainLayout";
 import { paths } from "./routes";
 
+// hello
 const MainPage: FunctionComponent<RouteComponentProps> = ({
   history,
   location,
