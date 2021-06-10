@@ -297,14 +297,15 @@ export const IssueFab = styled(Fab)({
 export const ConnectedMainLayout: FunctionComponent = ({ children }) => (
   <MultiwalletProvider>
     <MainLayout>{children}</MainLayout>
-    <IssueFab
-      size="small"
-      color="primary"
-      href={links.BUGS_LOG}
-      title="Report an issue"
-      {...externalLinkAttributes}
-    >
-      <Feedback fontSize="small" />
-    </IssueFab>
   </MultiwalletProvider>
 );
+
+//    <IssueFab
+//      size="small"
+//      color="primary"
+//      href={links.BUGS_LOG}
+//      title="Report an issue"
+//      {...externalLinkAttributes}
+//    >
+//      <Feedback fontSize="small" />
+//    </IssueFab>
