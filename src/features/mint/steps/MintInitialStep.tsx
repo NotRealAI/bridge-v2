@@ -64,7 +64,7 @@ export const MintInitialStep: FunctionComponent<TxConfigurationStepProps> = ({
   return (
     <>
       <PaperContent bottomPadding>
-        <MintIntro />
+        {/*<MintIntro />*/}
         <AssetDropdownWrapper>
           <AssetDropdown
             label="Send"

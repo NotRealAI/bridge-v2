@@ -31,12 +31,30 @@ type DebugProps = {
   wrapper?: boolean;
 };
 
-function replacer(name: any, val: any) {
-  if (val && val.type === "Buffer") {
-    return "buffer";
-  }
-  return val;
-}
+// Prevents circular refs
+function replacer() {
+  const seen = new WeakSet();
+  return (key: any, value: any) => {
+    if (value && value.type === "Buffer") {
+      return "buffer";
+    }
+    
+    if (typeof value === "object" && value !== null) {
+      if (seen.has(value)) {
+        return;
+      }
+      seen.add(value);
+    }
+    return value;
+  };
+};
+
+//function replacer(name: any, val: any) {
+//  if (val && val.type === "Buffer") {
+//    return "buffer";
+//  }
+//  return val;
+//}
 
 type DebugWrapperProps = {
   enabled: boolean;
@@ -80,7 +98,7 @@ export const Debug: FunctionComponent<DebugProps> = ({
   return show && !disable ? (
     <DebugWrapper enabled={!!wrapper}>
       <pre className={classes.root} onClick={noClick}>
-        {JSON.stringify(target, replacer, 2)}
+        {JSON.stringify(target, replacer(), 2)}
       </pre>
     </DebugWrapper>
   ) : null;

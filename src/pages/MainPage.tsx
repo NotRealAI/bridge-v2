@@ -23,9 +23,9 @@ const MainPage: FunctionComponent<RouteComponentProps> = ({
   history,
   location,
 }) => {
-  if (!localStorage.getItem(storageKeys.TERMS_AGREED)) {
-    history.replace(paths.WELCOME);
-  }
+  //if (!localStorage.getItem(storageKeys.TERMS_AGREED)) {
+  //  history.replace(paths.WELCOME);
+  //}
   if (location.pathname === "/") {
     history.replace(paths.MINT);
   }
