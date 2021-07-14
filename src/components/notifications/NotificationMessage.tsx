@@ -5,7 +5,7 @@ import React, { FunctionComponent } from 'react'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 300,
+    width: 250,
   },
 }));
 
